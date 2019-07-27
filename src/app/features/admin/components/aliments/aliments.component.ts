@@ -16,7 +16,7 @@ import { AlimentsService } from '../../state/aliments/aliments.service';
 export class AlimentsComponent implements OnInit {
   displayedColumns: string[] = ['label', 'categories'];
   dataSource = new MatTableDataSource<Aliment>();
-  pageSizeOptions = [10, 20, 50];
+  pageSizeOptions = [5, 10, 20, 50];
   paginationParams = new PaginationParameters(0, this.pageSizeOptions[0]);
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -26,20 +26,16 @@ export class AlimentsComponent implements OnInit {
     private alimentsQuery: AlimentsQuery) { }
 
   ngOnInit() {
-    this.dataSource.paginator = this.paginator;
-
     this.alimentsQuery.selectAll().subscribe(data => {
       this.dataSource.data = data;
     });
 
-    // this.alimentsQuery.selectPagination$.subscribe(pagination => {
-    //   if (pagination) {
-    //     this.paginator.pageIndex = pagination.currentPage;
-    //     this.paginator.length = pagination.rowCount;
-    //     // this.paginationInfo = pagination;
-    //     console.log(pagination.rowCount);
-    //   }
-    // });
+    this.alimentsQuery.selectPagination$.subscribe(pagination => {
+      if (pagination) {
+        this.paginator.pageIndex = pagination.currentPage;
+        this.paginator.length = pagination.rowCount;
+      }
+    });
 
     this.alimentsService.getPaged(this.paginationParams);
   }
@@ -48,7 +44,6 @@ export class AlimentsComponent implements OnInit {
     this.paginationParams.page = pageEvent.pageIndex;
     this.paginationParams.pageSize = pageEvent.pageSize;
     this.alimentsService.getPaged(this.paginationParams);
-
   }
 
   getCategoriesAsString(categories: AlimentCategory[]): string {
