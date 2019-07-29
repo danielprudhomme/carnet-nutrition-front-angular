@@ -1,7 +1,7 @@
 import { EntityStore } from '@datorama/akita';
 
 import { PagedEntityState } from './paged-entity.state';
-import { PagedResult } from './paged-result';
+import { PagedResult } from '../../../models/pagination/paged-result';
 import { PaginationInfo } from './pagination-info';
 
 const initialState = {

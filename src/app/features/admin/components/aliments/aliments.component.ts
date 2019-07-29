@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { PaginationParameters } from 'src/app/models/pagination/pagination-parameters';
 
@@ -43,6 +44,12 @@ export class AlimentsComponent implements OnInit {
   pageChanged(pageEvent: PageEvent) {
     this.paginationParams.page = pageEvent.pageIndex;
     this.paginationParams.pageSize = pageEvent.pageSize;
+    this.alimentsService.getPaged(this.paginationParams);
+  }
+
+  sortData(sort: Sort) {
+    this.paginationParams.sortBy = sort.active;
+    this.paginationParams.sortDirection = sort.direction;
     this.alimentsService.getPaged(this.paginationParams);
   }
 

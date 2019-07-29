@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StoreConfig } from '@datorama/akita';
-import { PagedEntityState } from 'src/app/models/pagination/paged-entity.state';
-import { PagedEntityStore } from 'src/app/models/pagination/paged-entity.store';
+import { PagedEntityState, PagedEntityStore } from 'src/app/extensions/akita-extensions';
 
 import { AdminServiceModule } from '../../admin-service.module';
 import { Aliment } from './aliment.model';
