@@ -1,0 +1,57 @@
+{
+    "admin": {
+        "aliments": {
+            "title": "Aliments",
+            "table": {
+                "columns": {
+                    "label": "Libellé",
+                    "categories": "Catégories"
+                }
+            }
+        }
+    },
+    "nutritional-info-type": {
+        "water": "Eau",
+        "energy-k-cal": "Energie kCal",
+        "energy-k-j": "Energie kJ",
+        "protein": "Protéines",
+        "carbohydrate": "Glucides",
+        "alimentary-fiber": "Fibres",
+        "sugar": "Sucres",
+        "starch": "Amidon",
+        "lipid": "Lipides",
+        "saturated-fatty-acid": "Acides gras saturés",
+        "poly-unsaturated-fatty-acid": "Acides gras poly-insaturés",
+        "mono-unsaturated-fatty-acid": "Acides gras mono-insaturés",
+        "cholesterol": "Cholesterol",
+        "alcohol": "Alcool",
+        "asthes": "Cendres",
+        "minerals": "Minéraux",
+        "calcium": "Calcium",
+        "chlorure": "Chlore",
+        "copper": "Cuivre",
+        "iron": "Fer",
+        "iodine": "Iode",
+        "magnesium": "Magnesium",
+        "manganese": "Manganese",
+        "phosphorus": "Phosphore",
+        "potassium": "Potassium",
+        "selenium": "Selenium",
+        "sodium": "Sodium",
+        "zinc": "Zinc",
+        "vitamins": "Vitamines",
+        "retinol": "Retinol",
+        "beta-carotene": "Beta-carotene",
+        "vitamin-d": "Vitamine D",
+        "vitamin-e": "Vitamine E",
+        "vitamin-k1": "Vitamine K1",
+        "vitamin-c": "Vitamine C",
+        "vitamin-b1": "Vitamine B1",
+        "vitamin-b2": "Vitamine B2",
+        "vitamin-b3": "Vitamine B3",
+        "vitamin-b5": "Vitamine B5",
+        "vitamin-b6": "Vitamine B6",
+        "vitamin-b9": "Vitamine B9",
+        "vitamin-b12": "Vitamine B12"
+    }
+}
