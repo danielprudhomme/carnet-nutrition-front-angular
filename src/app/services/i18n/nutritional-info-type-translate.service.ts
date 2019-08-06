@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { NutritionalInfoType } from 'src/app/enums';
 
 import { StringHelper } from '../helpers/string.helper';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { StringHelper } from '../helpers/string.helper';
 export class NutritionalInfoTypeTranslateService {
   private nutritionalInfoTypeTranslations: Map<NutritionalInfoType, string>;
 
-  constructor() {
+  constructor(private translateService: TranslateService) {
     this.nutritionalInfoTypeTranslations = Object.keys(NutritionalInfoType).reduce(
       (acc: Map<NutritionalInfoType, string>, key: string) => {
         if (!isNaN(+key)) {
@@ -22,5 +23,9 @@ export class NutritionalInfoTypeTranslateService {
 
   getTranslationKey(type: NutritionalInfoType): string {
     return this.nutritionalInfoTypeTranslations.get(type);
+  }
+
+  get(type: NutritionalInfoType): string {
+    return this.translateService.instant(this.nutritionalInfoTypeTranslations.get(type));
   }
 }

@@ -1,5 +1,8 @@
 <div>{{ 'admin.aliments.title' | translate }}</div>
 
+<button mat-button
+    (click)="modifyDisplayedColumns()">{{ 'admin.aliments.table.modify-displayed-columns.button' | translate }}</button>
+
 <div class="mat-elevation-z8">
     <div class="aliments-table-container">
         <table mat-table [dataSource]="dataSource" matSort (matSortChange)="sortData($event)">

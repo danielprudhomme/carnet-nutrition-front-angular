@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>{{ 'admin.aliments.table.modify-displayed-columns.modal.title' | translate }}</h1>
+<div mat-dialog-content>
+    <app-pick-list [textListLeft]="'admin.aliments.table.modify-displayed-columns.modal.available-columns' | translate"
+        [textListRight]="'admin.aliments.table.modify-displayed-columns.modal.displayed-columns' | translate"
+        [availableItems]="availableColumns" [selectedIds]="selectedIds"
+        (onChanged)="onSelectionChanged($event)">
+    </app-pick-list>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">{{ 'main.actions.cancel' | translate }}</button>
+    <button mat-button (click)="onOkClick()">{{ 'main.actions.ok' | translate }}</button>
+</div>

@@ -1,4 +1,10 @@
 {
+    "main": {
+        "actions": {
+            "ok": "Ok",
+            "cancel": "Annuler"
+        }
+    },
     "admin": {
         "aliments": {
             "title": "Aliments",
@@ -6,6 +12,14 @@
                 "columns": {
                     "label": "Libellé",
                     "categories": "Catégories"
+                },
+                "modify-displayed-columns": {
+                    "button": "Modifier les colonnes affichées",
+                    "modal": {
+                        "title": "Modifier les colonnes affichées",
+                        "available-columns": "Colonnes disponibles",
+                        "displayed-columns": "Colonnes affichées"
+                    }
                 }
             }
         }
@@ -25,7 +39,8 @@
         "mono-unsaturated-fatty-acid": "Acides gras mono-insaturés",
         "cholesterol": "Cholesterol",
         "alcohol": "Alcool",
-        "asthes": "Cendres",
+        "ashes": "Cendres",
+        "salt": "Sel",
         "minerals": "Minéraux",
         "calcium": "Calcium",
         "chlorure": "Chlore",

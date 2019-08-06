@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="list-container">
+        <h2 class="mat-subheading-2">{{ textListLeft }}</h2>
+
+        <div cdkDropList #leftList="cdkDropList" [cdkDropListData]="notSelected" [cdkDropListConnectedTo]="[rightList]"
+            class="list" (cdkDropListDropped)="drop($event)">
+            <div class="box" *ngFor="let item of notSelected" cdkDrag>{{ item.label }}</div>
+        </div>
+    </div>
+
+    <div class="list-container">
+        <h2 class="mat-subheading-2">{{ textListRight }}</h2>
+
+        <div cdkDropList #rightList="cdkDropList" [cdkDropListData]="selected" [cdkDropListConnectedTo]="[leftList]"
+            class="list" (cdkDropListDropped)="drop($event)">
+            <div class="box" *ngFor="let item of selected" cdkDrag>{{ item.label }}</div>
+        </div>
+    </div>
+</div>
